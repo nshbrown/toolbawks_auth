@@ -1,0 +1,12 @@
+= POG - Password Operations Gem
+== Notice
+
+=== PasswordTests.qualitative_strength
+
+The algorithm is modified from 
+http://phiras.wordpress.com/2007/04/08/password-strength-meter-a-jquery-plugin/
+
+=== PasswordTests.entropy
+
+The algorithm is modified from the formula in RFC 4086 on page 4 
+(http://www.ietf.org/rfc/rfc4086.txt)

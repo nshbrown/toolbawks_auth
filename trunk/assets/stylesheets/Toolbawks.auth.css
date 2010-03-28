@@ -1,0 +1,159 @@
+/***
+# Copyright (c) 2007 Nathaniel Brown
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+***/
+
+div.fieldWithErrors {
+  display: inline;
+}
+
+/*** Login ***/
+
+.toolbawks_auth_login h3 {
+  margin: 10px 0 0 0;
+  text-decoration: underline;
+}
+
+.toolbawks_auth_login div.field label {
+  display: inline !important;
+  font-size: 0.8em;
+}
+
+.toolbawks_auth_login div.field input {
+  display: inline !important;
+}
+
+.toolbawks_auth_login div.email span.error {
+  padding: 7px 0 0 116px;
+}
+
+.toolbawks_auth_login div.existing_yes span.error {
+  padding: 7px 0 0 149px;
+}
+
+.toolbawks_auth_login div.email,
+.toolbawks_auth_login div.existing_no,
+.toolbawks_auth_login div.existing_yes {
+  padding: 0 0 0 30px;
+}
+
+.toolbawks_auth_login div.existing_no label,
+.toolbawks_auth_login div.existing_yes label {
+  padding: 0 5px;
+}
+
+.toolbawks_auth_login div.existing_yes input#account_existing_yes {
+  border: none;
+  background: none !important;
+}
+
+.toolbawks_auth_login div.options {
+  margin: 0 0 20px 0;
+}
+
+.toolbawks_auth_login div.options .remember_me {
+  font-size: 0.8em;
+  padding: 4px 0 0 180px;
+  float: left;
+}
+
+.toolbawks_auth_login div.options .remember_me label {
+  padding: 0 0 0 5px;
+}
+
+.toolbawks_auth_login div.options .forgot_password {
+  float: left;
+  padding: 4px 0 0 25px;
+  font-size: 0.8em;
+}
+
+.toolbawks_auth_login div.options .forgot_password a,
+.toolbawks_auth_login div.options .forgot_password a:visited {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.toolbawks_auth_login div.options .forgot_password a:hover {
+  text-decoration: normal;
+}
+
+
+/*** Register ***/
+
+.toolbawks_auth_register h3 {
+  color: red;
+  text-decoration: underline;
+  padding: 5px 0 10px 0;
+}
+
+.toolbawks_auth_register .field_row {
+  margin: 6px 0 13px 0;
+}
+
+.toolbawks_auth_register .name .field span.error,
+.toolbawks_auth_register .field span.error {
+  padding: 3px 0pt 0pt 125px !important;
+  clear: left;
+}
+
+.toolbawks_auth_register .name div.error {
+  clear: left;
+}
+
+.toolbawks_auth_register div.field label {
+  font-size: 0.8em;
+  padding: 4px 6px 1px 0;
+  text-align: right;
+  width: 120px;
+}
+
+.toolbawks_auth_register label,
+.toolbawks_auth_register input {
+  float: left;
+}
+
+.toolbawks_auth_register .password .strength_slider,
+.toolbawks_auth_reset_password .password .strength_slider {
+  margin: 4px 0 0 15px;
+  float: left;
+  width: 119px;
+  height: 21px;
+  position: relative;
+  background: url('/plugin_assets/toolbawks_auth/images/password_strength/slider.gif') no-repeat top left;
+}
+
+.toolbawks_auth_reset_password .password .strength_slider {
+  margin: 24px 0 0 15px;
+}
+
+.toolbawks_auth_register .password .strength_slider_handle,
+.toolbawks_auth_reset_password .password .strength_slider_handle {
+  width: 16px;
+  height: 14px;
+  position: absolute;
+  top: -4px;
+  left: -8px;
+  background: url('/plugin_assets/toolbawks_auth/images/password_strength/handle.gif') no-repeat top left;
+}
+
+.toolbawks_auth_register .password .error {
+  clear: left;
+}

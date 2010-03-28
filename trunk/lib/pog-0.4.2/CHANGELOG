@@ -1,0 +1,37 @@
+= POG - Password Operations Gem
+== Changelog
+
+<b>Version 0.4.2</b> <em>Public Beta</em> rev 14
+* Added the Rakefile to the gem
+
+<b>Version 0.4.1</b> <em>Public Beta</em> rev 12
+* Added additional unit tests
+* Password.authenticate detects the format of the given hash (binary, hex, etc)
+* DRYed up hash generation and salting in Password
+* Salt now using RandomStringGenerator to generate random salts
+
+<b>Version 0.4</b> <em>Public Beta</em> rev 11
+* Added qualitative testing and entropy calculation (Feature Request 12813)
+* Added PasswordTests.default_test_params for getting a default set of test 
+  parameters
+* Added PasswordTests.test_minimum_non_alpha and 
+  PasswordTests.test_maximum_non_alpha
+
+<b>Version 0.3</b> <em>Public Beta</em> rev 6
+* Fixed Bug 12815
+* DRYed up password generation (created new RandomStringGenerator class)
+* removed Password.generate in favor of RandomStringGenerator class
+* Added WEP Key generation (Feature Request 12816)
+
+<b>Version 0.2.1</b> <em>Public Beta</em> rev 5
+* Fixed Bug 12487
+* Added functionality to call tests with arbitrary parameters.
+* Dewindified all source files (ie "\r\n" -> "\n")
+
+<b>Version 0.2</b> <em>Public Beta</em> rev 3 
+* Wasn't precisely sure how to do the gemspec, but fixed the problem
+* Moved pog.rb into +lib+ directory
+* Added docs on how to use the gem (ie install and require)
+
+<b>Version 0.1</b> <em>Public Beta</em> rev 2
+* Initial Version

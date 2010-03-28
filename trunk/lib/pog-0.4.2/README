@@ -1,0 +1,60 @@
+= POG - Password Operations Gem
+
+Copyright (c) 2007 Operis Systems, LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+== What is POG?
+
+POG is a Ruby gem for simplifying random password generation, password strength
+testing, password hashing and salting, and password-hash authentication.
+
+
+== Using POG in your application
+
+1. Install the gem
+     %> gem install pog
+2. Add the following line to your files
+     require 'pog'
+3. You're ready!
+
+
+== Class Password
+
+Password encapsulates a password and provides functionality for hashing, 
+hash-based authentication, and random password generation.
+
+
+== Class RandomStringGenerator
+
+RandomStringGenerator provides the functionality to generate random Strings.
+It could be called RandomPasswordGenerator.
+
+
+== Class Salt
+
+Salt encapsulates a password's salt and provides functionality for password 
+salting and random salt generation.
+
+
+== Class PasswordTests
+
+PasswordTests provides functionality for testing strength of passwords.
+
+
+== Module CharacterRanges
+
+CharacterRanges provides preset ranges for sets of ASCII characters for random 
+password generation.  CharacterRanges is mixed into the Password and 
+RandomStringGenerator classes.

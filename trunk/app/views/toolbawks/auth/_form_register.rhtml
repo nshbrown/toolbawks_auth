@@ -1,0 +1,41 @@
+<%
+# Copyright (c) 2007 Nathaniel Brown
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+-%>
+<%= form_tag '/register', :method => 'post', :class => 'toolbawks_auth_register' %>
+<%= hidden_field :toolbawks_profile, :is_default, :value => 1 %>
+  <div class="field_row clearfix name">
+    <%= form_input(:object => @toolbawks_user, :input => text_field(:toolbawks_profile, :name, :value => (@toolbawks_user.profiles && @toolbawks_user.profiles.length > 0 ? @toolbawks_user.profiles[0].name : nil)), :name => 'My name is:', :error => (@toolbawks_user.errors[:profiles] ? true : false)) %>
+    <% if @toolbawks_user.errors[:profiles] %><div class="field error"><span class="error">Name is invalid</span></div><% end %>
+  </div>
+  <div class="field_row clearfix email">
+    <%= form_input(:object => @toolbawks_user, :input => text_field(:toolbawks_user, :email), :name => 'My e-mail address:') %>
+  </div>
+  <div class="field_row clearfix password">
+    <%= form_input(:object => @toolbawks_user, :input => password_field(:toolbawks_user, :password), :name => 'Enter a password:') %>
+    <div id="toolbawks_user_password_strength_slider" class="strength_slider"><div id="toolbawks_user_password_strength_slider_handle" class="strength_slider_handle"></div></div>
+  </div>
+  <div class="field_row clearfix password_confirmation">
+    <%= form_input(:object => @toolbawks_user, :input => password_field(:toolbawks_user, :password_confirmation), :name => 'Verify password:') %>
+  </div>
+  <div class="submit">
+    <input type="image" src="/plugin_assets/toolbawks_auth/images/buttons/register.gif" name="register" class="button_toolbawks_auth_register" />
+  </div>
+</form>

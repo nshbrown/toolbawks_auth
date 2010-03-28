@@ -1,0 +1,45 @@
+G -- Password Operations Gem version 0.2 (Public beta) is now released
+on RubyForge.
+
+Site:     http://pog.rubyforge.org
+RDocs:    http://pog.rubyforge.org/doc
+Tracker:  http://pog.rubyforge.org/tracker
+License:  http://www.apache.org/licenses/LICENSE-2.0
+SVN:      svn://rubyforge.org/var/svn/pog
+
+POG is a Ruby gem for simplifying random password generation, password
+strength testing, password hashing and salting, and password-hash
+authentication.
+
+This is my first public gem, so any and all suggestions and comments
+would be greatly appreciated.
+
+
+==============
+Quick Overview
+==============
+
+Class Password encapsulates a password and provides functionality for
+hashing, hash-based authentication, and random password generation.
+
+Class Salt encapsulates a password's salt and provides functionality for
+password salting and random salt generation.
+
+Class PasswordTests provides functionality for testing strength of
+passwords.
+
+Module CharacterRanges provides preset ranges for sets of ASCII
+characters for random password generation. CharacterRanges is mixed into
+the Password class.
+
+
+==================================
+ Feature Requests/Bug Submissions
+==================================
+
+Please submit feature requests and bug requests
+
+(a) directly to me
+(b) to RubyForge Tracker: http://pog.rubyforge.org/tracker
+(c) to Ruby-Talk forum/list
+s

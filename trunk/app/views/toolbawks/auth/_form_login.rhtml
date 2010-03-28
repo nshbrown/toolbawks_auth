@@ -1,0 +1,41 @@
+<%
+# Copyright (c) 2007 Nathaniel Brown
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+-%>
+<%= form_tag '/login', :method => 'post', :class => 'toolbawks_auth_login' %>
+<h3>What is your e-mail address?</h3>
+  <div class="field_row email clearfix">
+    <%= form_input(:object => @toolbawks_user, :name => 'My e-mail address is:', :input => text_field(:toolbawks_user, :email)) %>
+  </div>
+<h3>Do you have an Exotic Suitcase password?</h3>
+  <div class="field_row existing_no clearfix">
+    <%= form_input(:object => @account, :input => radio_button(:account, :existing, :no) + '<label for="account_existing_no">No, I am a new customer.</label>' ) %>
+  </div>
+  <div class="field_row existing_yes clearfix">
+    <%= form_input(:object => @toolbawks_user, :input => radio_button(:account, :existing, :yes, :checked => true) + '<label for="account_existing_yes">Yes, I have a password:</label>' + password_field(:toolbawks_user, :password) ) %>
+  </div>
+  <div class="field_row options clearfix">
+    <div class="remember_me"><%= check_box :remember_me, :enabled, :checked => (params[:remember_me] && params[:remember_me][:enabled] == '1' ? true : false) %><label for="remember_me_enabled">Remember me</label></div>
+    <div class="forgot_password"><%= link_to 'Forgot your password?', '/forgot_password' %></div>
+  </div>
+  <div class="field_row submit clearfix">
+    <input type="image" src="/plugin_assets/toolbawks_auth/images/buttons/sign_in_using_our_secure_server.gif" name="login" class="button_toolbawks_auth_login" />
+  </div>
+</form>
